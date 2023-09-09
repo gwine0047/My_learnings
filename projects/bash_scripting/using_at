@@ -1,0 +1,8 @@
+#!/bin/bash
+
+log_file=job_results.log
+#at 15:32 -f /home/gwine0047/projects/bash_scripting/using_at
+# atq gives you the detail of a job to be run along with the id
+# atrm (id) will stop the job
+# at 18:00 09162023 to run at Sept 16 2023
+usr/bin/echo " The script ran at the following time: $(usr/bin/date)" >$log_file

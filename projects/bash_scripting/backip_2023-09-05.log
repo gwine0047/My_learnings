@@ -1,0 +1,8 @@
+sending incremental file list
+created directory backup//current
+./
+a.txt
+b.txt
+
+sent 116 bytes  received 63 bytes  358.00 bytes/sec
+total size is 39  speedup is 0.22 (DRY RUN)
