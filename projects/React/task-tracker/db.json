@@ -4,18 +4,18 @@
       "id": 1,
       "text": "Doctor's Appointment",
       "day": "Feb 5th at 2:30pm",
-      "reminder": false
+      "reminder": true
     },
     {
       "id": 2,
       "text": "Meeting at school",
       "day": "Feb 6th at 1:30pm",
-      "reminder": true
+      "reminder": false
     },
     {
       "text": "Meeting with President Tunubu",
       "date": "30th January, 2024",
-      "reminder": true,
+      "reminder": false,
       "id": 3
     },
     {
