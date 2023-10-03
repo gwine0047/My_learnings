@@ -1,0 +1,34 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Doctor's Appointment",
+      "day": "Feb 5th at 2:30pm",
+      "reminder": false
+    },
+    {
+      "id": 2,
+      "text": "Meeting at school",
+      "day": "Feb 6th at 1:30pm",
+      "reminder": true
+    },
+    {
+      "text": "Meeting with President Tunubu",
+      "date": "30th January, 2024",
+      "reminder": true,
+      "id": 3
+    },
+    {
+      "text": "Call Mr Elon Musk",
+      "date": "21st, January, 2024",
+      "reminder": true,
+      "id": 4
+    },
+    {
+      "text": "Dinner with Mr Gates",
+      "date": "25th December, 2023",
+      "reminder": true,
+      "id": 5
+    }
+  ]
+}
