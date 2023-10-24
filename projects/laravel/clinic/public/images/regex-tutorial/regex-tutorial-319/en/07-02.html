@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" async="" src="../js/playfield.js"></script>
+    <script type="text/javascript" async="" src="../js/quiz.js"></script>
+    <script type="text/javascript" async="" src="../js/hint.js"></script>
+    <script type="text/javascript" async="" src="../js/cookies.js"></script>
+    <script type="text/javascript" async="" src="../js/requirements.js"></script>
+    <script type="text/javascript" async="" src="../js/compatibility.js"></script>
+    <script type="text/javascript" async="" src="../js/languages.js"></script>
+    <script type="text/javascript" async="" src="../js/switch-language.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/tutorial.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/playfield.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/quiz.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/hint.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/progress.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/requirements.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/languages.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/Ubuntu.css" media="screen"/>
+    <link rel="shortcut icon" href="../favicon.ico?v=2" type="image/x-icon">
+    <meta charset="utf-8">
+    <title>Start and End - Interactive Introduction to Regular Expressions</title>
+    <script type="text/javascript">
+      var current_page_id = "page-" + "en/07-02.html";
+    </script>
+    <style>
+    .clicked .toggle-hint:before {
+      content: "Hide the hint!";
+    }
+
+    .secret .toggle-hint:before {
+      content: "Show a hint?";
+    }
+
+    .playfield.verbose .match.ok:after {
+      content: "✓ matched";
+    }
+
+    .playfield.verbose .match.fail:after {
+      content: "✓ matched, but should not match";
+    }
+
+    .playfield.verbose .nomatch.ok:after {
+      content: "should match";
+    }
+
+    .playfield.verbose .nomatch.fail:after {
+      content: "ok, no match";
+    }
+
+    .quiz .expression:before {
+      content: "Regular Expression: ";
+    }
+
+    .quiz .expression:after {
+      content: " appears in which lines? Click on 'Yes' or 'No'.";
+    }
+
+    .quiz .button-ok:before {
+      content: "Yes";
+    }
+
+    .quiz .button-fail:before {
+      content: "No";
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="progress">
+            <a id="page-en/00-01.html" class="step " href="../en/00-01.html"></a>
+            <a id="page-en/01-01.html" class="step " href="../en/01-01.html"></a>
+            <a id="page-en/01-02.html" class="step " href="../en/01-02.html"></a>
+            <a id="page-en/01-03.html" class="step " href="../en/01-03.html"></a>
+            <a id="page-en/02-01.html" class="step " href="../en/02-01.html"></a>
+            <a id="page-en/02-02.html" class="step " href="../en/02-02.html"></a>
+            <a id="page-en/03-01.html" class="step " href="../en/03-01.html"></a>
+            <a id="page-en/03-02.html" class="step " href="../en/03-02.html"></a>
+            <a id="page-en/03-03.html" class="step " href="../en/03-03.html"></a>
+            <a id="page-en/04-01.html" class="step " href="../en/04-01.html"></a>
+            <a id="page-en/04-02.html" class="step " href="../en/04-02.html"></a>
+            <a id="page-en/04-03.html" class="step " href="../en/04-03.html"></a>
+            <a id="page-en/04-04.html" class="step " href="../en/04-04.html"></a>
+            <a id="page-en/05-01.html" class="step " href="../en/05-01.html"></a>
+            <a id="page-en/05-02.html" class="step " href="../en/05-02.html"></a>
+            <a id="page-en/05-03.html" class="step " href="../en/05-03.html"></a>
+            <a id="page-en/05-04.html" class="step " href="../en/05-04.html"></a>
+            <a id="page-en/06-01.html" class="step " href="../en/06-01.html"></a>
+            <a id="page-en/06-02.html" class="step " href="../en/06-02.html"></a>
+            <a id="page-en/06-03.html" class="step " href="../en/06-03.html"></a>
+              <div class="same-topic">
+            <a id="page-en/07-01.html" class="step " href="../en/07-01.html"></a>
+            <a id="page-en/07-02.html" class="step current" href="../en/07-02.html">22</a>
+            <a id="page-en/07-03.html" class="step " href="../en/07-03.html"></a>
+            <a id="page-en/07-04.html" class="step " href="../en/07-04.html"></a>
+            <a id="page-en/07-05.html" class="step " href="../en/07-05.html"></a>
+              </div>
+            <a id="page-en/08-01.html" class="step " href="../en/08-01.html"></a>
+            <a id="page-en/08-02.html" class="step " href="../en/08-02.html"></a>
+            <a id="page-en/08-03.html" class="step " href="../en/08-03.html"></a>
+            <a id="page-en/08-04.html" class="step " href="../en/08-04.html"></a>
+            <a id="page-en/09-01.html" class="step " href="../en/09-01.html"></a>
+            <a id="page-en/09-02.html" class="step " href="../en/09-02.html"></a>
+            <a id="page-en/09-03.html" class="step " href="../en/09-03.html"></a>
+            <a id="page-en/09-04.html" class="step " href="../en/09-04.html"></a>
+            <a id="page-en/10-01.html" class="step " href="../en/10-01.html"></a>
+            <a id="page-en/10-02.html" class="step " href="../en/10-02.html"></a>
+            <a id="page-en/11-01.html" class="step " href="../en/11-01.html"></a>
+            <a id="page-en/11-02.html" class="step " href="../en/11-02.html"></a>
+            <a id="page-en/11-03.html" class="step " href="../en/11-03.html"></a>
+            <a id="page-en/11-04.html" class="step " href="../en/11-04.html"></a>
+            <a id="page-en/12-01.html" class="step " href="../en/12-01.html"></a>
+            <a id="page-en/12-02.html" class="step " href="../en/12-02.html"></a>
+            <a id="page-en/12-03.html" class="step " href="../en/12-03.html"></a>
+            <a id="page-en/12-04.html" class="step " href="../en/12-04.html"></a>
+            <a id="page-en/13-01.html" class="step " href="../en/13-01.html"></a>
+            <a id="page-en/13-02.html" class="step " href="../en/13-02.html"></a>
+            <a id="page-en/14-01.html" class="step " href="../en/14-01.html"></a>
+            <a id="page-en/50-01.html" class="step " href="../en/50-01.html"></a>
+      </div>
+      <h2>Start and End</h2>
+    </header>
+    <div class="main">
+      <p>
+  Circumflexes can be combined with sets.
+  Place the circumflex to find all fruits that to not start
+  with letters from <span class="regex">C</span> to <span class="regex">G</span>.
+</p>
+<div class="playfield">
+  <input type="text" value="[^C-G]" class="regex" reference="^[^C-G]">
+  <div class="message"></div>
+  <ul class="examples">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+    <li>Date</li>
+    <li>Elderberry</li>
+    <li>Fig</li>
+    <li>Grapefruit</li>
+    <li>Ginger</li>
+    <li>Hops</li>
+    <li>Jasmin</li>
+    <li>Lemon</li>
+  </ul>
+</div>
+<p class="hint">
+  With <span class="regex">^[^C-G]</span>, we look for all lines, which do not start with <span class="regex">C</span>, <span class="regex">D</span>, <span class="regex">E</span>, <span class="regex">F</span> or <span class="regex">G</span>.
+</p>
+
+        <a href="../en/07-03.html" class="next-page">Next Step</a>
+    </div>
+    <footer>
+      <div class="languageFooterMenu" >
+        <select id="languageMenu" onchange="changeLanguage()">
+            <option id="en" selected href="../en/07-02.html">English</option>
+            <option id="de" href="../de/07-02.html">Deutsch</option>
+            <option id="sv" href="../sv/07-02.html">Svenska</option>
+        </select>
+        <script>
+
+        </script>
+      </div>
+      <div class="links">
+        <a href="https://github.com/CoderDojoPotsdam/regex-tutorial/edit/master/en/07-02.html">improve page</a>
+        <a href="https://github.com/CoderDojoPotsdam/regex-tutorial/issues/new">report problem</a>
+        <a href="javascript:deleteCookies()">delete state</a>
+        <a href="https://github.com/CoderDojoPotsdam/regex-tutorial/tree/master/en/07-02.html">view source</a>
+      </div>
+      <div class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          <img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="../img/cc-by-sa.png" />
+        </a>
+        <span xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/InteractiveResource' property='dct:title' rel='dct:type'>Regex Tutorial</span> by <span xmlns:cc='http://creativecommons.org/ns#' property='cc:attributionName'>Nicco Kunzmann</span> is licensed under a <a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'>Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </div>
+    </footer>
+  </body>
+</html>

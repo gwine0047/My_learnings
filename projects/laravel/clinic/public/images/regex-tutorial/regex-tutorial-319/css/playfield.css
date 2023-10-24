@@ -1,0 +1,77 @@
+/* ----- playfield ----- */
+.playfield {
+  padding: 1em;
+  border-radius: 1em;
+}
+.playfield  .regex {
+  width: 100%;
+}
+
+.playfield.success .regex {
+  width: calc(100% - 2em);
+}
+.playfield.success:before {
+  content: "✓";
+}
+
+.playfield  .message {
+}
+.playfield  .examples {
+}
+.playfield  .ok {
+}
+.playfield  .fail {
+}
+
+/* ----- playfield.js  ----- */
+
+.playfield ul {
+  margin-bottom: 0em;
+}
+
+
+.playfield  .text-match {
+  display: inline;
+  font-weight: bold;
+}
+.playfield  .text-nomatch {
+}
+
+/* --- feedback if matches or not --- */
+.playfield  li:after {
+  padding-left: 2em;
+}
+.playfield  .match::after {
+  content: "✓";
+  padding-left: 2em;
+}
+
+.playfield  .nomatch {
+}
+.playfield  .nomatch.ok {
+  background-color: #ffcccc;
+}
+.playfield  .match.fail {
+  background-color: #ffcccc;
+}
+.playfield  .error {
+  background-color: #ffcccc;
+}
+
+/* --- experiment --- */
+.playfield  .experiment {
+  margin-top: 1em;
+}
+.playfield  .experiment input {
+  width: 100%;
+  margin: 0.3em;
+}
+.playfield  .experiment .content {
+  padding-left: 1em;
+}
+.playfield  .experiment::after {
+  content: none;
+}
+
+.playfield  .experiment.match {
+}

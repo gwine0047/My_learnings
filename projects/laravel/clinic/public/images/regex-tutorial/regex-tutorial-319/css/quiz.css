@@ -1,0 +1,58 @@
+.quiz .expression {
+}
+
+
+.quiz .choices {
+  
+}
+
+.quiz .choices li {
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+.quiz .choices li.ok {
+  
+}
+.quiz .choices li.fail {
+  
+}
+
+.quiz .button {
+  padding: 0.3em;
+}
+
+.quiz .button-ok {
+}
+.quiz .button-ok:hover {
+  background-color: #ccffcc;
+  color: black;
+}
+.chosen-button-ok .button-ok {
+  background-color: black;
+  color: white;
+}
+
+.quiz .button-fail {
+  margin-right: 1em;
+}
+.quiz .button-fail:hover {
+  background-color: #ffcccc;
+  color: black;
+}
+.chosen-button-fail .button-fail {
+  color: white;
+  background-color: black;
+}
+
+.chosen-button-fail.ok {
+  background-color: #ffcccc;
+}
+.chosen-button-ok.fail {
+  background-color: #ffcccc;
+}
+.chosen-button-ok.ok {
+  background-color: #ccffcc;
+}
+.chosen-button-fail.fail {
+  background-color: #ccffcc;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" async="" src="../js/playfield.js"></script>
+    <script type="text/javascript" async="" src="../js/quiz.js"></script>
+    <script type="text/javascript" async="" src="../js/hint.js"></script>
+    <script type="text/javascript" async="" src="../js/cookies.js"></script>
+    <script type="text/javascript" async="" src="../js/requirements.js"></script>
+    <script type="text/javascript" async="" src="../js/compatibility.js"></script>
+    <script type="text/javascript" async="" src="../js/languages.js"></script>
+    <script type="text/javascript" async="" src="../js/switch-language.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/tutorial.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/playfield.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/quiz.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/hint.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/progress.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/requirements.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/languages.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="../css/Ubuntu.css" media="screen"/>
+    <link rel="shortcut icon" href="../favicon.ico?v=2" type="image/x-icon">
+    <meta charset="utf-8">
+    <title>Buchstaben - Interaktive Einführung in Reguläre Ausdrücke</title>
+    <script type="text/javascript">
+      var current_page_id = "page-" + "de/01-01.html";
+    </script>
+    <style>
+    .clicked .toggle-hint:before {
+      content: "Hinweis verstecken!";
+    }
+
+    .secret .toggle-hint:before {
+      content: "Hinweis anzeigen?";
+    }
+
+    .playfield.verbose .match.ok:after {
+      content: "✓ gefunden";
+    }
+
+    .playfield.verbose .match.fail:after {
+      content: "✓ gefunden, soll nicht passen";
+    }
+
+    .playfield.verbose .nomatch.ok:after {
+      content: "soll gefunden werden";
+    }
+
+    .playfield.verbose .nomatch.fail:after {
+      content: "ok, nicht gefunden";
+    }
+
+    .quiz .expression:before {
+      content: "Regulärer Ausdruck: ";
+    }
+
+    .quiz .expression:after {
+      content: " In welchen Zeilen kommt er vor? Klicke auf 'Ja' oder 'Nein'.";
+    }
+
+    .quiz .button-ok:before {
+      content: "Ja";
+    }
+
+    .quiz .button-fail:before {
+      content: "Nein";
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="progress">
+            <a id="page-de/00-01.html" class="step " href="../de/00-01.html"></a>
+              <div class="same-topic">
+            <a id="page-de/01-01.html" class="step current" href="../de/01-01.html">2</a>
+            <a id="page-de/01-02.html" class="step " href="../de/01-02.html"></a>
+            <a id="page-de/01-03.html" class="step " href="../de/01-03.html"></a>
+              </div>
+            <a id="page-de/02-01.html" class="step " href="../de/02-01.html"></a>
+            <a id="page-de/02-02.html" class="step " href="../de/02-02.html"></a>
+            <a id="page-de/03-01.html" class="step " href="../de/03-01.html"></a>
+            <a id="page-de/03-02.html" class="step " href="../de/03-02.html"></a>
+            <a id="page-de/03-03.html" class="step " href="../de/03-03.html"></a>
+            <a id="page-de/04-01.html" class="step " href="../de/04-01.html"></a>
+            <a id="page-de/04-02.html" class="step " href="../de/04-02.html"></a>
+            <a id="page-de/04-03.html" class="step " href="../de/04-03.html"></a>
+            <a id="page-de/04-04.html" class="step " href="../de/04-04.html"></a>
+            <a id="page-de/05-01.html" class="step " href="../de/05-01.html"></a>
+            <a id="page-de/05-02.html" class="step " href="../de/05-02.html"></a>
+            <a id="page-de/05-03.html" class="step " href="../de/05-03.html"></a>
+            <a id="page-de/05-04.html" class="step " href="../de/05-04.html"></a>
+            <a id="page-de/06-01.html" class="step " href="../de/06-01.html"></a>
+            <a id="page-de/06-02.html" class="step " href="../de/06-02.html"></a>
+            <a id="page-de/06-03.html" class="step " href="../de/06-03.html"></a>
+            <a id="page-de/07-01.html" class="step " href="../de/07-01.html"></a>
+            <a id="page-de/07-02.html" class="step " href="../de/07-02.html"></a>
+            <a id="page-de/07-03.html" class="step " href="../de/07-03.html"></a>
+            <a id="page-de/07-04.html" class="step " href="../de/07-04.html"></a>
+            <a id="page-de/07-05.html" class="step " href="../de/07-05.html"></a>
+            <a id="page-de/08-01.html" class="step " href="../de/08-01.html"></a>
+            <a id="page-de/08-02.html" class="step " href="../de/08-02.html"></a>
+            <a id="page-de/08-03.html" class="step " href="../de/08-03.html"></a>
+            <a id="page-de/08-04.html" class="step " href="../de/08-04.html"></a>
+            <a id="page-de/09-01.html" class="step " href="../de/09-01.html"></a>
+            <a id="page-de/09-02.html" class="step " href="../de/09-02.html"></a>
+            <a id="page-de/09-03.html" class="step " href="../de/09-03.html"></a>
+            <a id="page-de/09-04.html" class="step " href="../de/09-04.html"></a>
+            <a id="page-de/10-01.html" class="step " href="../de/10-01.html"></a>
+            <a id="page-de/10-02.html" class="step " href="../de/10-02.html"></a>
+            <a id="page-de/11-01.html" class="step " href="../de/11-01.html"></a>
+            <a id="page-de/11-02.html" class="step " href="../de/11-02.html"></a>
+            <a id="page-de/11-03.html" class="step " href="../de/11-03.html"></a>
+            <a id="page-de/11-04.html" class="step " href="../de/11-04.html"></a>
+            <a id="page-de/12-01.html" class="step " href="../de/12-01.html"></a>
+            <a id="page-de/12-02.html" class="step " href="../de/12-02.html"></a>
+            <a id="page-de/12-03.html" class="step " href="../de/12-03.html"></a>
+            <a id="page-de/12-04.html" class="step " href="../de/12-04.html"></a>
+            <a id="page-de/13-01.html" class="step " href="../de/13-01.html"></a>
+            <a id="page-de/13-02.html" class="step " href="../de/13-02.html"></a>
+            <a id="page-de/14-01.html" class="step " href="../de/14-01.html"></a>
+            <a id="page-de/50-01.html" class="step " href="../de/50-01.html"></a>
+      </div>
+      <h2>Buchstaben</h2>
+    </header>
+    <div class="main">
+      <p>
+  Du kannst Wörter nach Buchstaben durchsuchen, ob sie einen Buchstaben enthalten.
+  Versuche es selbst und schreibe den Buchstaben
+  <span class="regex">a</span> in das Feld unten.
+</p>
+<div class="playfield verbose">
+  <input type="text" value="" class="regex" reference="a">
+  <div class="message"></div>
+  <ul class="examples">
+    <li>apfel</li>
+    <li>birne</li>
+    <li>erdbeere</li>
+    <li>ananas</li>
+    <li>plaume</li>
+  </ul>
+</div>
+<p>
+  Wenn du es richtig gemacht hast, erscheint ein Haken neben deinem
+  regulären Ausdruck.
+</p>
+
+        <a href="../de/01-02.html" class="next-page">Nächster Schritt</a>
+    </div>
+    <footer>
+      <div class="languageFooterMenu" >
+        <select id="languageMenu" onchange="changeLanguage()">
+            <option id="en" href="../en/01-01.html">English</option>
+            <option id="de" selected href="../de/01-01.html">Deutsch</option>
+            <option id="sv" href="../sv/01-01.html">Svenska</option>
+        </select>
+        <script>
+
+        </script>
+      </div>
+      <div class="links">
+        <a href="https://github.com/CoderDojoPotsdam/regex-tutorial/edit/master/de/01-01.html">Seite verbessern</a>
+        <a href="https://github.com/CoderDojoPotsdam/regex-tutorial/issues/new">Problem melden</a>
+        <a href="javascript:deleteCookies()">Zustand löschen</a>
+        <a href="https://github.com/CoderDojoPotsdam/regex-tutorial/tree/master/de/01-01.html">Quelltext anzeigen</a>
+      </div>
+      <div class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          <img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="../img/cc-by-sa.png" />
+        </a>
+        <span xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/InteractiveResource' property='dct:title' rel='dct:type'>Regex-Tutorial</span> von <span xmlns:cc='http://creativecommons.org/ns#' property='cc:attributionName'>Nicco Kunzmann</span> ist lizenziert unter einer <a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'>Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
+      </div>
+    </footer>
+  </body>
+</html>
