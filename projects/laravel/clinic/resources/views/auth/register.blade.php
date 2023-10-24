@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+            <img src=" {{asset('pngimg.com - tesla_logo_PNG10.png')}} " alt="Logo" style="max-width: 50px;">
         </x-slot>
 
         <x-validation-errors class="mb-4" />

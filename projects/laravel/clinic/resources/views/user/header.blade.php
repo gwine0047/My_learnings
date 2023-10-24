@@ -2,10 +2,11 @@
     <!-- header section strats -->
     <header class="header_section">
       <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="/home">
             <span>
               TeslaWealthHub 
+              <img src=" {{asset('pngimg.com - tesla_logo_PNG10.png')}} " alt="Logo" style="max-width: 20px;">
             </span>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -113,7 +114,7 @@
                           The Future of Trading.
                         </h2>
                         <div class="">
-                          <a href="">
+                          <a href="{{route('register')}}">
                             Get Started
                           </a>
                         </div>
@@ -143,7 +144,7 @@
                           The Future of Trading.
                         </h2>
                         <div class="">
-                          <a href="">
+                          <a href="{{route('register')}}">
                             Get Started
                           </a>
                         </div>
@@ -173,7 +174,7 @@
                           The Future of Trading.
                         </h2>
                         <div class="">
-                          <a href="">
+                          <a href="{{route('register')}}">
                             Get Started
                           </a>
                         </div>
@@ -203,7 +204,7 @@
                           The Future of Trading.
                         </h2>
                         <div class="">
-                          <a href="">
+                          <a href="{{route('register')}}">
                             Get Started
                           </a>
                         </div>
